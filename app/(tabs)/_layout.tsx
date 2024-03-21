@@ -10,7 +10,8 @@ const Layout = () => (
       tabBarLabelStyle: {
         fontFamily: 'mon-sb',
       },
-    }}>
+    }}
+  >
     <Tabs.Screen
       name="index"
       options={{
