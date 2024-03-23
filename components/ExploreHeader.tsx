@@ -63,10 +63,12 @@ const ExploreHeader = ({ onCategoryChanged }: Props) => {
         <View style={styles.actionRow}>
           <Link href={'/(modals)/booking'} asChild>
             <TouchableOpacity style={styles.searchBtn}>
-              <Ionicons name="search" size={24} />
+              <Ionicons name="search" size={20} />
               <View>
-                <Text style={{ fontFamily: 'mon-sb' }}>Where to?</Text>
-                <Text style={{ fontFamily: 'mon', color: Colors.grey }}>Anywhere · Any week</Text>
+                <Text style={{ fontFamily: 'mon-sb', fontSize: 14 }}>Where to?</Text>
+                <Text style={{ fontFamily: 'mon', color: Colors.grey, fontSize: 12 }}>
+                  Anywhere · Any week
+                </Text>
               </View>
             </TouchableOpacity>
           </Link>
@@ -110,7 +112,7 @@ const ExploreHeader = ({ onCategoryChanged }: Props) => {
 const styles = StyleSheet.create({
   container: {
     backgroundColor: '#fff',
-    height: 130,
+    height: 120,
   },
   actionRow: {
     flexDirection: 'row',
@@ -118,7 +120,7 @@ const styles = StyleSheet.create({
     justifyContent: 'space-between',
     paddingHorizontal: 24,
     paddingBottom: 16,
-    gap: 10,
+    gap: 20,
   },
   filterBtn: {
     padding: 10,
@@ -133,7 +135,7 @@ const styles = StyleSheet.create({
     borderWidth: StyleSheet.hairlineWidth,
     borderColor: '#c2c2c2',
     flex: 1,
-    padding: 14,
+    padding: 10,
     borderRadius: 30,
     backgroundColor: '#fff',
 
@@ -148,12 +150,12 @@ const styles = StyleSheet.create({
     },
   },
   categoryText: {
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: 'mon-sb',
     color: Colors.grey,
   },
   categoryTextActive: {
-    fontSize: 14,
+    fontSize: 12,
     fontFamily: 'mon-sb',
     color: '#000',
   },
@@ -161,7 +163,7 @@ const styles = StyleSheet.create({
     flex: 1,
     alignItems: 'center',
     justifyContent: 'center',
-    paddingBottom: 8,
+    paddingBottom: 4,
   },
   categoriesBtnActive: {
     flex: 1,
@@ -169,7 +171,7 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
     borderBottomColor: '#000',
     borderBottomWidth: 2,
-    paddingBottom: 8,
+    paddingBottom: 4,
   },
 });
 

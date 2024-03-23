@@ -1,3 +1,4 @@
+import { GestureHandlerRootView } from 'react-native-gesture-handler';
 import React, { useEffect } from 'react';
 import { useFonts } from 'expo-font';
 import { Stack, useRouter } from 'expo-router';
@@ -67,7 +68,9 @@ export default function RootLayout() {
 
   return (
     <ClerkProvider publishableKey={CLERK_PUBLISHABLE_KEY!} tokenCache={tokenCache}>
-      <RootLayoutNav />
+      <GestureHandlerRootView style={{ flex: 1 }}>
+        <RootLayoutNav />
+      </GestureHandlerRootView>
     </ClerkProvider>
   );
 }
@@ -100,7 +103,13 @@ function RootLayoutNav() {
           ),
         }}
       />
-      <Stack.Screen name="listing/[id]" options={{ headerTitle: '' }} />
+      <Stack.Screen
+        name="listing/[id]"
+        options={{
+          headerTitle: '',
+          headerTransparent: true,
+        }}
+      />
       <Stack.Screen
         name="(modals)/booking"
         options={{
